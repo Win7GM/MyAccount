@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/home_share_text"
-        android:title="分享文字" />
-    <item
-        android:id="@+id/home_share_pic"
-        android:title="分享图片" />
+        android:icon="@drawable/ic_menu_overflow"
+        app:showAsAction="always"
+        android:title="@string/placeholder">
+        <menu>
+            <item
+                android:id="@+id/home_share_pic"
+                android:icon="@drawable/ic_action_pic_share"
+                android:title="@string/home_share_pic"
+                app:showAsAction="withText" />
+            <item
+                android:id="@+id/home_share_text"
+                android:icon="@drawable/ic_action_text_share"
+                android:title="@string/home_share_text"
+                app:showAsAction="withText" />
+        </menu>
+    </item>
 </menu>

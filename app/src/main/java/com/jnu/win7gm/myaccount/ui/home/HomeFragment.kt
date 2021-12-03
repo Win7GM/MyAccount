@@ -1,14 +1,14 @@
 package com.jnu.win7gm.myaccount.ui.home
 
 import android.os.Bundle
-import android.view.*
-import androidx.appcompat.app.AppCompatActivity
+import android.view.LayoutInflater
+import android.view.MenuItem
+import android.view.View
+import android.view.ViewGroup
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.jnu.win7gm.myaccount.R
 import com.jnu.win7gm.myaccount.databinding.FragmentHomeBinding
@@ -21,6 +21,26 @@ class HomeFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
+    private fun initToolbar() {
+        val navController = findNavController()
+        // Passing each menu ID as a set of Ids because each
+        // menu should be considered as top level destinations.
+        val appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.nav_home, R.id.nav_history, R.id.nav_analysis
+            ), requireActivity().findViewById<DrawerLayout>(R.id.drawer_layout)
+        )
+
+        binding.toolbar
+            .setupWithNavController(navController, appBarConfiguration)
+
+        binding.toolbar.inflateMenu(R.menu.home_menu)
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -28,16 +48,12 @@ class HomeFragment : Fragment() {
     ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
-        setHasOptionsMenu(true)
-        val navController = findNavController()
-        binding.homeToolbar.setupWithNavController(navController)
-
+        initToolbar()
         return root
     }
 
-    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        menu.clear()
-        inflater.inflate(R.menu.home_menu, menu)
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return false
     }
 
     override fun onDestroyView() {
