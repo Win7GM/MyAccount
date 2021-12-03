@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">MyAccount</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">小勤快</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_history">History</string>
+    <string name="menu_analysis">Analysis</string>
+    <string name="nav_header_subtitle">一个单纯的记账小书童</string>
+    <string name="in_of_month">本月收入</string>
+    <string name="_0_00">0.00</string>
+    <string name="out_of_month">本月支出</string>
+    <string name="budget">净资产</string>
+</resources>
