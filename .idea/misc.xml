@@ -6,7 +6,9 @@
         <entry key="app/src/main/res/layout/fragment_analysis.xml" value="0.21458333333333332" />
         <entry key="app/src/main/res/layout/fragment_history.xml" value="0.24818840579710144" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/home_recycler_item.xml" value="0.5206847360912982" />
         <entry key="app/src/main/res/layout/include_today_header.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/item_brief_info.xml" value="0.33106884057971014" />
         <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.21458333333333332" />
         <entry key="app/src/main/res/menu/home_menu.xml" value="0.3802083333333333" />
       </map>

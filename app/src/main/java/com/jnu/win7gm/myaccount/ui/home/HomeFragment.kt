@@ -41,6 +41,10 @@ class HomeFragment : Fragment() {
         super.onCreate(savedInstanceState)
     }
 
+    private fun initRecyclerView() {
+
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -49,6 +53,7 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
         initToolbar()
+        initRecyclerView()
         return root
     }
 
