@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.jnu.win7gm.myaccount.R
+import com.jnu.win7gm.myaccount.data.database.AppDatabase
 import com.jnu.win7gm.myaccount.databinding.FragmentHistoryBinding
 
 class HistoryFragment : Fragment() {
@@ -19,6 +20,13 @@ class HistoryFragment : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
+
+    private var db: AppDatabase? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        db = AppDatabase.getInstance(requireContext())
+    }
 
     private fun initToolbar() {
         val navController = findNavController()
@@ -34,10 +42,6 @@ class HistoryFragment : Fragment() {
             .setupWithNavController(navController, appBarConfiguration)
 
 //        binding.toolbar.inflateMenu(R.menu.home_menu)
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
     }
 
     override fun onCreateView(

@@ -1,16 +1,17 @@
 package com.jnu.win7gm.myaccount
 
 import android.os.Bundle
-import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.navigation.NavigationView
+import com.jnu.win7gm.myaccount.data.database.AppDatabase
 import com.jnu.win7gm.myaccount.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var db: AppDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,9 +24,7 @@ class MainActivity : AppCompatActivity() {
             (supportFragmentManager.findFragmentById(R.id.nav_host_fragment_content_main) as NavHostFragment).navController
 
         navView.setupWithNavController(navController)
-    }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        return super.onCreateOptionsMenu(menu)
+        db = AppDatabase.getInstance(this)!!
     }
 }
