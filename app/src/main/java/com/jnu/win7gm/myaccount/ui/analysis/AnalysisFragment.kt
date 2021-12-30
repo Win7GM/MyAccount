@@ -10,7 +10,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.jnu.win7gm.myaccount.R
-import com.jnu.win7gm.myaccount.data.database.AppDatabase
 import com.jnu.win7gm.myaccount.databinding.FragmentAnalysisBinding
 
 class AnalysisFragment : Fragment() {
@@ -21,11 +20,11 @@ class AnalysisFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
-    private var db: AppDatabase? = null
+//    private var db: AppDatabase? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        db = AppDatabase.getInstance(requireContext())
+//        db = AppDatabase.getInstance(requireContext())
     }
 
     private fun initToolbar() {

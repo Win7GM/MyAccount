@@ -28,7 +28,6 @@
         tools:layout="@layout/fragment_analysis" />
     <fragment
         android:id="@+id/nav_add_record"
-        android:name="com.jnu.win7gm.myaccount.ui.addrecord.AddRecordFragment"
-        android:label="fragment_add_record"
+        android:name="com.jnu.win7gm.myaccount.ui.addrecord.AddRecordContainerFragment"
         tools:layout="@layout/fragment_add_record" />
 </navigation>

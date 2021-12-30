@@ -1,31 +1,32 @@
 package com.jnu.win7gm.myaccount.data.entity
 
-import androidx.room.ColumnInfo
-import androidx.room.Entity
-import androidx.room.PrimaryKey
-import java.sql.Date
+import java.io.Serializable
+import java.util.*
 
-@Entity(tableName = "record")
+//@Entity(tableName = "record")
 data class Record(
-    @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "id")
-    val id: Int,
+//    @PrimaryKey(autoGenerate = true)
+//    @ColumnInfo(name = "id")
+    val id: UUID,
 
-    @ColumnInfo(name = "date")
-    val date: Date?,
+//    @ColumnInfo(name="date")
+    val date: String,
 
-    @ColumnInfo(name = "account")
+//    @ColumnInfo(name="time")
+    val time: String,
+
+//    @ColumnInfo(name = "account")
     val account: String,
 
-    @ColumnInfo(name = "category")
+//    @ColumnInfo(name = "category")
     val category: String,
 
-    @ColumnInfo(name = "type")
+//    @ColumnInfo(name = "type")
     val type: Char,
 
-    @ColumnInfo(name = "money")
-    val money: Int,
+//    @ColumnInfo(name = "money")
+    val money: Double,
 
-    @ColumnInfo(name = "comment", defaultValue = "")
+//    @ColumnInfo(name = "comment", defaultValue = "")
     val comment: String?
-)
+) : Serializable

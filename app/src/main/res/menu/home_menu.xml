@@ -3,20 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:icon="@drawable/ic_menu_overflow"
-        app:showAsAction="always"
-        android:title="@string/placeholder">
-        <menu>
-            <item
-                android:id="@+id/home_share_pic"
-                android:icon="@drawable/ic_action_pic_share"
-                android:title="@string/home_share_pic"
-                app:showAsAction="withText" />
-            <item
-                android:id="@+id/home_share_text"
-                android:icon="@drawable/ic_action_text_share"
-                android:title="@string/home_share_text"
-                app:showAsAction="withText" />
-        </menu>
-    </item>
+        android:id="@+id/home_share_text"
+        android:icon="@drawable/ic_share_24"
+        android:title="@string/home_share_text"
+        app:showAsAction="ifRoom|withText" />
 </menu>

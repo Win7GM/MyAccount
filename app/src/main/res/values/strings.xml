@@ -13,12 +13,13 @@
     <string name="menu_history">History</string>
     <string name="menu_analysis">Analysis</string>
     <string name="nav_header_subtitle">一个单纯的记账小书童</string>
-    <string name="in_of_month">本月收入</string>
+    <string name="in">总收入</string>
     <string name="_0_00">0.00</string>
-    <string name="out_of_month">本月支出</string>
+    <string name="out">总支出</string>
     <string name="budget">净资产</string>
     <string name="home_share_today">今日分享</string>
     <string name="home_share_pic">分享图片</string>
     <string name="home_share_text">分享文字</string>
     <string name="placeholder">placeholder</string>
+    <string name="ctg_default">未选择类型</string>
 </resources>
