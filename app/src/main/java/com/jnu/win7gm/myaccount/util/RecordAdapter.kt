@@ -18,7 +18,7 @@ class RecordAdapter(
 
     inner class RecordViewHolder(_binding: ViewBinding) : RecyclerView.ViewHolder(_binding.root),
         View.OnCreateContextMenuListener {
-        // TODO 视图绑定需要在外面直接初始化
+        // 视图绑定需要在外面直接初始化
         var binding: RecordBriefInfoBinding = _binding as RecordBriefInfoBinding
 
         init {
